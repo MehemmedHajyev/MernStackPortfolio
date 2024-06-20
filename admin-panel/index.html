@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <h2>Admin Girişi</h2>
+        <input type="text" id="username" placeholder="Kullanıcı Adı">
+        <input type="password" id="password" placeholder="Şifre">
+        <button onclick="login()">Giriş Yap</button>
+    </div>
+
+    <div class="admin-panel" id="admin-panel" style="display:none;">
+        <h2>Hoşgeldiniz, <span id="admin-name"></span></h2>
+        <nav>
+            <ul>
+                <li><a href="#dashboard" onclick="showSection('dashboard')">Dashboard</a></li>
+                <li><a href="#portfolio" onclick="showSection('portfolio')">Portfolyo</a></li>
+                <li><a href="#services" onclick="showSection('services')">My Services</a></li>
+                <li><a href="#settings" onclick="showSection('settings')">Ayarlar</a></li>
+                <li><a href="#profile" onclick="showSection('profile')">Profil</a></li>
+                <li><a href="#" onclick="logout()">Çıkış Yap</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <section id="dashboard" class="section">
+                <h3>Dashboard</h3>
+                <p>Burada dashboard içerikleri olacak.</p>
+            </section>
+
+            <section id="services" class="section" style="display:none;">
+                <h3>Services Yönetimi</h3>
+                <button onclick="showForm('create', 'services-form')">Yeni Services Ekle</button>
+                <div id="services-list">
+                    <!-- Services öğeleri burada listelenecek -->
+                </div>
+                <div id="services-form"  class="p-5" style="display:none;">
+                    <h4 id="form-title">Yeni Service Ekle</h4>
+                    <input type="text" id="service-title" placeholder="Title">
+                    <input type="text" id="service-description" placeholder="Description">
+                    <input type="file" id="service-image" class="input-img" placeholder="Image">
+                    <img id="service-img-preview" src="" alt="" class="img">
+                    <button onclick="saveProject('services')">Kaydet</button>
+                    <button onclick="cancelForm()">İptal</button>
+                </div>
+            </section>
+            <section id="portfolio" class="section" style="display:none;">
+                <h3>Portfolyo Yönetimi</h3>
+                <button onclick="showForm('create', 'portfolio-form')">Yeni Proje Ekle</button>
+                <div id="portfolio-list">
+                    <!-- Portfolyo öğeleri burada listelenecek -->
+                </div>
+                <div id="portfolio-form" class="p-5" style="display:none;">
+                    <h4 id="form-title">Yeni Proje Ekle</h4>
+                    <input type="text" id="project-title" placeholder="Title">
+                    <input type="text" id="project-description" placeholder="Description">
+                    <input type="file" id="project-image" class="input-img" placeholder="Image">
+                    <img id="project-img-preview" src="" alt="" class="img">
+                    <button onclick="saveProject('portfolio')">Kaydet</button>
+                    <button onclick="cancelForm()">İptal</button>
+                </div>
+            </section>
+            <section id="settings" class="section" style="display:none;">
+                <h3>Ayarlar</h3>
+                <p>Ayarlar sekmesi içeriği.</p>
+            </section>
+            <section id="profile" class="section" style="display:none;">
+                <h3>Profil</h3>
+                <p>Profil sekmesi içeriği.</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "Oktay",
+      "description": "Hello World"
+    },
+    {
+      "id": 2,
+      "name": "Murad",
+      "description": "Hello World"
+    },
+    {
+      "id": 3,
+      "name": "Telam",
+      "description": "Hello World"
+    },
+    {
+      "id": 4,
+      "name": "Telman",
+      "description": "Hello World"
+    }
+  ],
+  "skills": [],
+  "experiences": [],
+  "portfolios": [
+    {
+      "id": 1,
+      "name": "mehemmed",
+      "description": "Hello World"
+    },
+    {
+      "id": 2,
+      "name": "Telman",
+      "description": "Hello World"
+    },
+    {
+      "id": 3,
+      "name": "Oktay",
+      "description": "Hello World"
+    },
+    {
+      "id": 4,
+      "name": "Telman",
+      "description": "Hello World",
+      "imageUrl": "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
+    },
+    {
+      "id": 5,
+      "name": "test",
+      "description": "Testttttt World",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9bLg1NQ7hxBmxr6mbk1fkQGv-a6f8QskCSmZlTK-3fg&s"
+    }
+  ],
+  "messages": []
+}
